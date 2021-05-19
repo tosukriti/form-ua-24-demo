@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>You've Entered</h1>
+	<h1>PDF Generated with your below input given.</h1>
 	
     <p th:text="'Name(s) of the Applicant:: ' + ${formua24.namesOfTheApplicant}" />
     <p th:text="'Address:: ' + ${formua24.address}" />
@@ -20,7 +20,7 @@
     <p th:text="'Attachment, if any:: ' + ${formua24.attachmentIfAny}" />
     <p th:text="'Date:: ' + ${formua24.date}" />
     <p th:text="'Place:: ' + ${formua24.place}" />
-    <a href="/formua24">Back</a>
-    <a href="/formua24">Generate PDF</a>
+    <a href="/formua24">Back to Fill Up Form Again</a>
+    <a href="/downloadpdf">Download PDF</a>
 </body>
 </html>
