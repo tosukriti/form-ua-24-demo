@@ -28,8 +28,8 @@ public class FormUA24Controller {
 	@PostMapping("/formua24")
 	public String greetingSubmit(@ModelAttribute FormUA24 formua24, Model model) {
 		model.addAttribute("formua24", formua24);
-		
-		PDFGenerator.generatePDFFromHTML("src/main/resources/formUA24.html");
+		PDFGenerator.generateHTMLFromUserData(formua24);
+		PDFGenerator.generatePDFFromHTML("src/main/resources/formUA24_new.html");
 		return "pdfresult";
 	}
 	
