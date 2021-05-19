@@ -1,1 +1,1 @@
-web: java -jar target/handling-form-submission.jar
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.handlingformsubmission.HandlingFormSubmissionApplication
