@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>FormUA24</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>PDF Generated with your below input given.</h1>
+	
+    <p th:text="'Name(s) of the Applicant:: ' + ${formua24.namesOfTheApplicant}" />
+    <p th:text="'Address:: ' + ${formua24.address}" />
+    <p th:text="'E-mail Address:: ' + ${formua24.emailId}" />
+    <p th:text="'Phone No:: ' + ${formua24.phoneNo}" />
+    <p th:text="'The Authority/Office before whom the case is pending :: ' + ${formua24.nameOfAuthorityForPendingCase}" />
+    <p th:text="'Contravention of sections or rules:: ' + ${formua24.contraventionOfSections}" />
+    <p th:text="'Brief facts of the case:: ' + ${formua24.briefFactsOfTheCase}" />
+    <p th:text="'Any other information relevant to the case:: ' + ${formua24.anyOtherInfoRelevantToCase}" />
+    <p th:text="'Prayer of the Applicant:: ' + ${formua24.prayerOfTheApplicant}" />
+    <p th:text="'Fee and transaction details:: ' + ${formua24.feeAndTransactionDetails}" />
+    <p th:text="'Attachment, if any:: ' + ${formua24.attachmentIfAny}" />
+    <a href="/formua24">Back to Fill Up Form Again</a>
+    <a href="/downloadpdf">Download PDF</a>
+</body>
+</html>
