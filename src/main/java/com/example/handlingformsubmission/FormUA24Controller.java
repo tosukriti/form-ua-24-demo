@@ -19,13 +19,13 @@ import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBo
 public class FormUA24Controller {
 
 
-	@GetMapping("formua24")
+	@GetMapping("/formua24")
 	public String UA24Form(Model model) {
 		model.addAttribute("formua24", new FormUA24());
 		return "formUA24";
 	}
 
-	@PostMapping("formua24")
+	@PostMapping("/formua24")
 	public String greetingSubmit(@ModelAttribute FormUA24 formua24, Model model) {
 		model.addAttribute("formua24", formua24);
 		PDFGenerator.generateHTMLFromUserData(formua24);
