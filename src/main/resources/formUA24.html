@@ -1,110 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<style>
-.one {
-  width: 14%;
-}
-.two {
-  width: 43%;
-}
-.three {
-  width: 43%;
-}
-
-table, th, td {
-  border: 0.01px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-  text-align: center;    
-}
-.centerallign{
-  text-align: center;
-}
-.rightallign{
-  text-align: right;
-}
-</style>
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>FormUA24</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-
-
-<table style="width:100%">
-<colgroup>
-    <col class="one" />
-    <col class="two" />
-    <col class="three" />
-  </colgroup>
-  <tr>
-    <td colspan="3"><b>FORM UA-24</b><br></br>(See rule 76)</td>
-  </tr>
-  <tr>
-  	<td colspan="3"><b>Application for compounding of Offences</b></td>
-  </tr>
-  <tr>
-    <td>1.</td>
-    <td>Name(s) of the Applicant</td>
-    <td>$namesOfTheApplicant</td>
-  </tr>
-  <tr>
-    <td>2.</td>
-    <td>Address</td>
-    <td>$address</td>
-  </tr>
-  <tr>
-    <td>3.</td>
-    <td>Email Address</td>
-    <td>$emailId</td>
-  </tr>
-  <tr>
-    <td>4.</td>
-    <td>Phone No.</td>
-    <td>$phoneNo</td>
-  </tr>
-  <tr>
-    <td>5.</td>
-    <td>The Authority/Office before whom the case is<br></br>pending :</td>
-    <td>$nameOfAuthorityForPendingCase</td>
-  </tr>
-  <tr>
-    <td>6.</td>
-    <td>Contravention of sections or rules</td>
-    <td>$contraventionOfSections</td>
-  </tr>
-  <tr>
-    <td>7.</td>
-    <td>Brief facts of the case</td>
-    <td>$briefFactsOfTheCase</td>
-  </tr>
-  <tr>
-    <td>8.</td>
-    <td>Any other information relevant to the case</td>
-    <td>$anyOtherInfoRelevantToCase</td>
-  </tr>
-  <tr>
-    <td>9.</td>
-    <td>Prayer of the Applicant</td>
-    <td>$prayerOfTheApplicant</td>
-  </tr>
-  <tr>
-    <td>10.</td>
-    <td>Fee and transaction details</td>
-    <td>$feeAndTransactionDetails</td>
-  </tr>
-  <tr>
-    <td>11.</td>
-    <td>Attachment, if any</td>
-    <td>$attachmentIfAny</td>
-  </tr>
-</table>
-<br></br>
-<p class="centerallign"><b>Verification</b></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I________________, the applicant, do hereby declare that what is stated above is true to the best of my information and belief.</p>
-<p style="position:relative;left:50%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name and Signature of the Applicant</p>
-<p style="line-height: 0.5;">Date:</p>
-<p style="line-height: 0.5;">Place:</p>
+	<h1>FormUA24</h1>
+    <form action="#" th:action="@{/formua24}" th:object="${formua24}" method="post">
+    	<p>Name(s) of the Applicant: <input type="text" th:field="*{namesOfTheApplicant}" /></p>
+        <p>Address: <input type="text" th:field="*{address}" /></p>
+        <p>E-mail Address: <input type="text" th:field="*{emailId}" /></p>
+        <p>Phone No: <input type="text" th:field="*{phoneNo}" /></p>
+        <p>The Authority/Office before whom the case is pending : <input type="text" th:field="*{nameOfAuthorityForPendingCase}" /></p>
+        <p>Contravention of sections or rules: <input type="text" th:field="*{contraventionOfSections}" /></p>
+        <p>Brief facts of the case: <input type="text" th:field="*{briefFactsOfTheCase}" /></p>
+        <p>Any other information relevant to the case: <input type="text" th:field="*{anyOtherInfoRelevantToCase}" /></p>
+        <p>Prayer of the Applicant: <input type="text" th:field="*{prayerOfTheApplicant}" /></p>
+        <p>Fee and transaction details: <input type="text" th:field="*{feeAndTransactionDetails}" /></p>
+        <p>Attachment, if any: <input type="text" th:field="*{attachmentIfAny}" /></p>
+        <p><input type="submit" value="Submit" /> 
+        <input type="reset" value="Reset" /></p>
+    </form>
 </body>
 </html>
