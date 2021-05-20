@@ -22,7 +22,7 @@ public class FormUA24Controller {
 	@GetMapping("/formua24")
 	public String UA24Form(Model model) {
 		model.addAttribute("formua24", new FormUA24());
-		return "formUA24";
+		return "/formUA24";
 	}
 
 	@PostMapping("/formua24")
@@ -30,7 +30,7 @@ public class FormUA24Controller {
 		model.addAttribute("formua24", formua24);
 		PDFGenerator.generateHTMLFromUserData(formua24);
 		PDFGenerator.generatePDFFromHTML("src/main/resources/formUA24_new.html");
-		return "pdfresult";
+		return "/pdfresult";
 	}
 	
 	@GetMapping("/downloadpdf")
